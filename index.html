@@ -1,0 +1,91 @@
+<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>赛车百科 — 模拟赛车装备兼容性一键查询</title>
+<style>
+:root{--ink:#1a1410;--bg:#fbf7f0;--card:#fff;--brand:#c2410c;--brand2:#ea580c;
+--muted:#7c6f64;--line:#ece3d6;--space:clamp(3.5rem,2rem+6vw,7rem)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo span{color:var(--brand)}
+.nav-cta{background:var(--ink);color:#fff;padding:9px 18px;border-radius:999px;
+font-size:.9rem;text-decoration:none;font-weight:600}
+.hero{padding:var(--space) 0 calc(var(--space) - 2rem)}
+.badge{display:inline-block;background:#fdebd9;color:var(--brand);font-weight:600;
+font-size:.82rem;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(2.1rem,1.1rem+4.4vw,3.8rem);line-height:1.1;letter-spacing:-.03em;
+font-weight:850;max-width:14ch}
+h1 .hl{background:linear-gradient(180deg,transparent 62%,#fdd9b8 62%)}
+.sub{font-size:clamp(1.05rem,.96rem+.5vw,1.3rem);color:var(--muted);margin:22px 0 32px;max-width:46ch}
+.cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.form{display:flex;gap:8px;background:var(--card);padding:8px;border-radius:14px;
+border:1px solid var(--line);box-shadow:0 8px 30px rgba(120,80,30,.07)}
+.form input{border:0;padding:12px 16px;font-size:1rem;outline:none;background:transparent;min-width:200px}
+.form button{background:linear-gradient(135deg,var(--brand2),var(--brand));color:#fff;
+border:0;padding:13px 26px;border-radius:9px;font-size:1rem;font-weight:700;cursor:pointer}
+.cta-sub{font-size:.85rem;color:var(--muted);margin-top:12px}
+.pains{background:var(--ink);color:#f3ece2;padding:var(--space) 0;margin-top:var(--space)}
+.pains h2{font-size:clamp(1.5rem,1rem+2vw,2.3rem);letter-spacing:-.02em;margin-bottom:8px}
+.pains .lead{color:#b9a890;margin-bottom:36px}
+.pains ul{list-style:none;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pains li{background:#26201a;padding:22px;border-radius:14px;border-left:3px solid var(--brand2);font-size:1.05rem}
+section.block{padding:var(--space) 0}
+.eyebrow{color:var(--brand);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+h2.t{font-size:clamp(1.6rem,1rem+2.4vw,2.5rem);letter-spacing:-.025em;margin:8px 0 38px;max-width:18ch}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;
+transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(120,80,30,.1)}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.96rem}
+.steps{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;
+display:grid;place-items:center;font-weight:800}
+.step p{color:var(--muted);font-size:.95rem;margin-top:2px}
+.proof{text-align:center;background:#fdebd9;border-radius:20px;padding:48px 24px;margin:var(--space) 0}
+.proof p{font-size:clamp(1.2rem,.9rem+1.4vw,1.7rem);font-weight:700;max-width:24ch;margin:0 auto;letter-spacing:-.02em}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{font-weight:650;cursor:pointer;font-size:1.05rem}
+details p{color:var(--muted);margin-top:10px}
+.seo{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.seo span{font-size:.85rem;color:var(--muted);background:var(--card);border:1px solid var(--line);
+padding:8px 14px;border-radius:999px;display:inline-block}
+footer{padding:48px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:var(--space)}
+.foot-cta{text-align:center;padding:var(--space) 0}
+.foot-cta h2{font-size:clamp(1.8rem,1.1rem+3vw,3rem);letter-spacing:-.03em;margin-bottom:26px}
+.foot-cta .form{display:inline-flex}
+</style><script data-goatcounter="https://friday-lab.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head><body>
+<div class="wrap">
+<header><div class="logo">🍜 赛车百科</div><a class="nav-cta" href="#join">加入内测</a></header>
+<div class="hero">
+<span class="badge">模拟赛车装备兼容性一键查询</span>
+<h1><span class="hl">新方向盘买回来，能装旧座舱吗？一键查询</span></h1>
+<p class="sub">查孔位对不对、需要什么转接件、参考真实装机照和步骤，不再折腾</p>
+<div id="join" class="cta-row">
+<form class="form" action="https://formsubmit.co/2734e0f49605680196bfc44f5cca0531" method="POST"><input type="hidden" name="_subject" value="赛车百科 — 新内测申请"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="email" name="email" required placeholder="留个邮箱,抢先体验"><button type="submit">加入内测</button></form></div>
+<p class="cta-sub">免费内测，仅需邮箱/微信，帮我们完善数据库</p>
+</div></div>
+<div class="pains"><div class="wrap">
+<h2>每天都在踩的坑</h2><p class="lead">这些事,现在没人帮你整合</p>
+<ul><li>官网规格各说各话，同个方向盘在不同座舱显示兼容vs不兼容，谁的对</li><li>论坛找不到确定答案，装了才发现螺距对不上，多花钱还白折腾</li><li>网红装机视频都是官方套装，自己买的组合找不到一个参考教程</li></ul></div></div>
+<div class="wrap">
+<section class="block"><div class="eyebrow">我们替你搞定</div>
+<h2 class="t">一个地方,全搞定</h2><div class="cards"><div class="card"><h3>兼容性矩阵查询</h3><p>基座+轮圈+座舱+踏板组合查询，孔位螺距对不对一目了然</p></div><div class="card"><h3>转接件推荐清单</h3><p>缺什么转接板、型号、价格、现货，复制清单买齐</p></div><div class="card"><h3>真实装机参考</h3><p>玩家验证照片和步骤，看别人怎么装，踩坑点都写清楚</p></div><div class="card"><h3>跨品牌孔位库</h3><p>Fanatec/Thrustmaster/Logitech等几十品牌规格对比汇总</p></div></div></section>
+<section class="block"><div class="eyebrow">三步上手</div>
+<h2 class="t">怎么用</h2><div class="steps"><div class="step"><span class="n">1</span><div><b>选装备组合</b><p>基座、轮圈、座舱各选一个型号，点查询</p></div></div><div class="step"><span class="n">2</span><div><b>看兼容结果</b><p>对不对、需要什么转接件、可能卡点一目了然</p></div></div><div class="step"><span class="n">3</span><div><b>参考装机过程</b><p>看真实照片和玩家提示，对得上就动手装</p></div></div></div></section>
+<div class="proof"><p>与玩家论坛版主合作验证数据，内测招募中，首批反馈决定优先品牌</p></div>
+<section class="block"><div class="eyebrow">常见问题</div>
+<h2 class="t">你可能想问</h2><details><summary>我的装备型号库里没有怎么办？</summary><p>申请收录或上传验证照片，社区帮验证，热门组合优先录入</p></details><details><summary>推荐转接件清单怎么购买？</summary><p>关联主流商城和官方渠道，一键跳转购买，持续扩展供应商</p></details><details><summary>数据准不准？比官方规格靠谱吗？</summary><p>基于真实装机验证和玩家反馈，比官方规格表更实用，避免纸面兼容实际卡壳</p></details></section>
+<div class="foot-cta" id="join2">
+<h2>新方向盘买回来，能装旧座舱吗？一键查询</h2>
+<form class="form" action="https://formsubmit.co/2734e0f49605680196bfc44f5cca0531" method="POST"><input type="hidden" name="_subject" value="赛车百科 — 新内测申请"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="email" name="email" required placeholder="留个邮箱,抢先体验"><button type="submit">加入内测</button></form>
+<p class="cta-sub">免费内测，仅需邮箱/微信，帮我们完善数据库</p>
+<div class="seo"><span>Fanatec DD2 转接到 Next Level Racing 座舱需要什么转接板</span><span>Logitech G923 轮圈能装到 8020 铝框架座舱吗</span><span>模拟赛车方向盘基座兼容性对比：Simucube vs Fanatec vs Thrustmaster</span><span>Sim Racing 新手装机避坑：轮圈基座螺距孔位对不上解决方案</span><span>飞行模拟摇杆支架兼容性查询：CH Products vs VKB vs Virpil</span><span>买了新方向盘怎么装：座舱支架转接件选型完全指南</span></div>
+</div>
+<footer>© 赛车百科 · 验证页(内测招募中) · 这是一个需求验证落地页</footer>
+</div></div></body></html>
