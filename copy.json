@@ -1,70 +1,70 @@
 {
   "brand": "RigMatch",
-  "tagline": "One-Click Sim Rig Compatibility Check",
-  "hero_headline": "New Steering Wheel? Check If It Fits Your Rig in Seconds",
-  "hero_sub": "Check bolt patterns, find adapters you need, see real installation photos and steps. Stop guessing, start building.",
+  "tagline": "One-click compatibility check for sim racing rigs",
+  "hero_headline": "New steering wheel? Check if it fits your rig in seconds",
+  "hero_sub": "Check bolt patterns, find the adapters you need, see real installation photos and steps. Stop guessing, start building.",
   "pains": [
-    "Manufacturer specs conflict: same wheel shows compatible on one site, incompatible on another—who's right?",
-    "Forum hunting takes forever. Buy parts, install fails, bolt pattern doesn't match. Money wasted, setup ruined",
-    "YouTube installs are all official bundles. Your custom combo of brands? No tutorials, no one's done it"
+    "Manufacturer specs conflict—same wheel shows compatible on one site, incompatible on another. Who's right?",
+    "Forum hunting takes forever. Buy parts, install fails, bolt pattern doesn't match. Money wasted, setup ruined.",
+    "YouTube installs all use official bundles. Your custom brand combo? No tutorials, no one's done it."
   ],
   "features": [
     {
       "title": "Compatibility Matrix",
-      "desc": "Pick base + rim + cockpit + pedal combo. Bolt patterns and fitment at a glance"
+      "desc": "Pick your base, rim, cockpit, and pedals. See bolt patterns and fitment at a glance."
     },
     {
       "title": "Adapter Recommendations",
-      "desc": "What adapters you need, part numbers, prices, in-stock status. Copy the list, buy it all at once"
+      "desc": "Get exact part numbers, prices, and in-stock status. Copy the full list and buy everything at once."
     },
     {
       "title": "Real Install Photos",
-      "desc": "Player-verified photos and step-by-step guides. See how others solved it, learn the gotchas first"
+      "desc": "Player-verified photos and step-by-step guides from the community. See how others solved it first."
     },
     {
       "title": "Cross-Brand Database",
-      "desc": "Fanatec, Thrustmaster, Logitech, Simucube, VKB, Virpil—dozens of brands in one table"
+      "desc": "Fanatec, Thrustmaster, Logitech, Simucube, VKB, Virpil—all the major brands in one table."
     }
   ],
   "how": [
     {
       "step": "Pick Your Combo",
-      "desc": "Choose base, wheel, cockpit, pedals. Hit search"
+      "desc": "Choose your base, wheel, cockpit, and pedals. Hit search."
     },
     {
       "step": "See Fit Results",
-      "desc": "Instant compatibility check. Adapters needed. Potential clashes. Crystal clear"
+      "desc": "Get instant compatibility checks, required adapters, and potential issues. Crystal clear."
     },
     {
       "step": "Follow the Install",
-      "desc": "Real photos and player tips. If it matches your gear, you're ready to build"
+      "desc": "Real photos and player tips. If it matches your gear, you're ready to build."
     }
   ],
-  "proof": "Verified with sim racing forum moderators and veteran builders. Closed beta live—your feedback picks which brands come first",
+  "proof": "Verified with sim racing forum moderators and veteran builders. Closed beta is live now—your feedback picks which brands we add first.",
   "cta": "Join Closed Beta",
-  "cta_sub": "Free beta. Email or Discord. Help us perfect the database",
+  "cta_sub": "Free beta. Email or Discord. Help us perfect the database.",
   "faq": [
     {
       "q": "My equipment isn't in the database",
-      "a": "Request it or upload verification photos. Community validates them. Popular combos get priority"
+      "a": "Request it or upload verification photos. Community members validate them. Popular combos get priority."
     },
     {
       "q": "How do I buy the recommended adapters?",
-      "a": "Direct links to major retailers and official channels. One-click checkout. We're adding suppliers constantly"
+      "a": "Direct links to retailers and official channels. One-click checkout. We're adding suppliers constantly."
     },
     {
       "q": "How accurate is this vs. official spec sheets?",
-      "a": "Real-world tested and verified by players. More reliable than official specs—catches fitment problems they miss"
+      "a": "Real-world tested and verified by players. More reliable than official specs—catches fitment problems they miss."
     }
   ],
   "seo_pages": [
     "Fanatec DD2 to Next Level Racing cockpit: which adapters do you need?",
-    "Does Logitech G923 rim fit 8020 aluminum frame cockpit?",
+    "Does Logitech G923 fit an 8020 aluminum frame cockpit?",
     "Sim racing steering base compatibility: Simucube vs Fanatec vs Thrustmaster",
-    "Sim racing beginner setup: bolt pattern and hole-spacing mismatch fix",
+    "Sim racing beginner setup: fixing bolt pattern and hole-spacing mismatches",
     "Flight sim joystick mount compatibility: CH Products vs VKB vs Virpil",
-    "New steering wheel setup: cockpit adapter selection complete guide"
+    "Complete guide to steering wheel setup and cockpit adapter selection"
   ],
-  "disclaimer": null,
+  "disclaimer": "",
   "lang": "en"
 }
